@@ -20,8 +20,8 @@ namespace GuessingGame
             // Initiate the guess counter at 1
             int numOfGuesses = 0;
 
-            // Limit number of guesses to 4
-            for (int i = 0; i < 4; i++)
+            // Limit number of guesses to 6
+            for (int i = 0; i < 6; i++)
 
             {
                 // Create a string variable and get user input from the keyboard and store it in the variable
@@ -33,22 +33,35 @@ namespace GuessingGame
                 // Increment number of guesses by 1
                 numOfGuesses++;
 
-                if (secretNum != parsedUserNum)
+                if (secretNum == parsedUserNum)
+                {
+                    Console.WriteLine("Correct! You win!");
+                    break;
+                    
+                }
+                else if (secretNum < parsedUserNum)
                 {
                     Console.WriteLine($"Nope, Its not {parsedUserNum}!");
-                    Console.WriteLine($"{4 - numOfGuesses} guesses remaining");
-                    if (numOfGuesses != 4)
+                    Console.WriteLine($"{6 - numOfGuesses} guesses remaining");
+                    if (numOfGuesses != 6)
                     {
-                        Console.WriteLine("Guess again!");
+                        Console.WriteLine("Guess Lower!");
                         Console.WriteLine("");
                         Console.WriteLine("------------");
                         Console.WriteLine("");
                     }
                 }
-                else
+                else if (secretNum > parsedUserNum)
                 {
-                    Console.WriteLine("Correct! You win!");
-                    break;
+                    Console.WriteLine($"Nope, Its not {parsedUserNum}!");
+                    Console.WriteLine($"{6 - numOfGuesses} guesses remaining");
+                    if (numOfGuesses != 6)
+                    {
+                        Console.WriteLine("Guess Higher!");
+                        Console.WriteLine("");
+                        Console.WriteLine("------------");
+                        Console.WriteLine("");
+                    }
                 }
             }
         }
