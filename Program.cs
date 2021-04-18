@@ -18,6 +18,15 @@ namespace GuessingGame
 
             string difficulty = Console.ReadLine();
 
+
+            //while (difficulty != "1" && difficulty != "2" && difficulty != "3")
+            //{
+            //    Console.WriteLine("Choose your difficulty level: ");
+            //    Console.WriteLine("1  for EASY (8 guesses)");
+            //    Console.WriteLine("2  for MEDIUM (6 guesses)");
+            //    Console.WriteLine("3  for HARD (4 guesses)");
+            //}
+
             if (difficulty == "1")
             {
                 numOfGuesses = 8;
@@ -32,11 +41,14 @@ namespace GuessingGame
             }
             else
             {
-                Console.WriteLine("Choose your difficulty level: ");
+                // Refactor this to prompt user for valid selection
+
+                Console.WriteLine("Choose your difficulty level:");
                 Console.WriteLine("1  for EASY (8 guesses)");
                 Console.WriteLine("2  for MEDIUM (6 guesses)");
                 Console.WriteLine("3  for HARD (4 guesses)");
             }
+
 
             Console.WriteLine("Guess a secret number between 1 and 100:");
             Console.WriteLine("");
