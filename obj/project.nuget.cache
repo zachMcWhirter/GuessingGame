@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "hsu5ECaBrpllk1wkpWQgZYw7wTAQEt8LvEZMGJSedgNt5hbc8bokXi4whl6HkbdvTDn4PnrkN6ki7nAAPqiU2g==",
+  "dgSpecHash": "5fVHYZuoLLazPle4cOufSWyeFGh1TPzNoHZ9egmEnoM4Tv4Av/jVjanbcG1xtdZjbKgUAIwkako1HQ5wWnsTSg==",
   "success": true,
   "projectFilePath": "C:\\Users\\zachm\\workspace\\csharp\\guessing-game\\GuessingGame\\GuessingGame.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\zachm\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }
