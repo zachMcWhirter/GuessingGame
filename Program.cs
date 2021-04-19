@@ -8,11 +8,12 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
+            Console.Clear();
             Console.WriteLine("Choose your difficulty level: ");
             Console.WriteLine("1  for EASY (8 guesses)");
             Console.WriteLine("2  for MEDIUM (6 guesses)");
             Console.WriteLine("3  for HARD (4 guesses)");
-
+            
             // Initiate the guess counter at 1
             int numOfGuesses = 0;
 
@@ -49,7 +50,7 @@ namespace GuessingGame
                 Console.WriteLine("3  for HARD (4 guesses)");
             }
 
-
+            Console.Clear();
             Console.WriteLine("Guess a secret number between 1 and 100:");
             Console.WriteLine("");
             
@@ -90,6 +91,10 @@ namespace GuessingGame
                         Console.WriteLine("------------");
                         Console.WriteLine("");
                     }
+                    if (numOfGuesses == 0)
+                    {
+                        Console.WriteLine($"The secret number was {secretNum}");
+                    }
                 }
                 else if (secretNum > parsedUserNum)
                 {
@@ -102,7 +107,12 @@ namespace GuessingGame
                         Console.WriteLine("------------");
                         Console.WriteLine("");
                     }
+                    if (numOfGuesses == 0)
+                    {
+                        Console.WriteLine($"The secret number was {secretNum}");
+                    }
                 }
+
             }
         }
     }
